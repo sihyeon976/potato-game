@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감자 주사위 게임</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          margin: 0;
+          padding: 20px;
+          background-color: #fffbe6;
+        }
+        h1 {
+          color: #333;
+        }
+        .potato {
+          font-size: 50px;
+          margin: 20px 0;
+        }
+        button {
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #ffa500;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #ff8800;
+        }
+    </style>
+</head>
+<body>
+<h1>🥔 오늘의 감자 게임 🥔</h1>
+<p>수연이의 마음만큼 감자가 나타납니다!</p>
+<div class="potato" id="potato">버튼을 눌러 감자를 확인하세요!</div>
+<button onclick="rollPotato()">감자 굴리기</button>
+
+<script>
+    function rollPotato() {
+      const randomNumber = Math.floor(Math.random() * 6) + 1; // 1~6 랜덤 숫자
+      const potatoContainer = document.getElementById('potato');
+      potatoContainer.innerHTML = '🥔'.repeat(randomNumber); // 감자를 숫자만큼 반복 표시
+    }
+</script>
+</body>
+</html>
